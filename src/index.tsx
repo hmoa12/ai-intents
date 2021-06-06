@@ -1,12 +1,63 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { unstable_createMuiStrictModeTheme as createMuiTheme, ThemeProvider, } from '@material-ui/core/styles';
+
+import App from './App';
+import './index.css';
+declare module '@material-ui/core/styles/createMuiTheme' {
+  interface IPaletteColor {
+    light?: string;
+    main: string;
+    dark?: string;
+    contrastText?: string;
+  }
+  interface ITypography {
+    fontFamily?: string[];
+    subtitle1?: object;
+    h5?: object;
+    subtitle2?: object;
+  }
+  interface Theme {
+    PaletteColor: IPaletteColor,
+    Typography: ITypography
+  }
+}
+
+/* future */
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#034D9F',
+    },
+  },
+  typography: {
+    fontFamily: [
+      '-apple-system',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+    ].join(','),
+    subtitle1: {
+      color: '#495057'
+    },
+    h5: {
+      fontWeight: 500,
+      color: '#212529'
+    },
+    subtitle2: {
+      fontStyle: 'italic'
+    }
+  }
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
