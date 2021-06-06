@@ -19,6 +19,8 @@ const useStyles = makeStyles({
     textAlign: 'left',
     marginLeft: 100,
   },
+  /* todo - The media queries has been written to extent that UI should not break on handheld devices 
+  Code optimization for device specific media queries still needs to be done */
   '@media (max-width: 620px)': {
     pageDescriptionCont: {
       marginLeft: 0,

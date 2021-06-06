@@ -48,9 +48,11 @@ Each item in the JSON contains the following:
 ##### Key points
 - Typescript has been used with React, to make the application strictly types and less error prone. Props and state values can be checked for type and errors can be found at early stages.
 - React Material-UI has been a major stakeholder driving the UI's across websites. It has good development support and is highly customizable. Components and themes can be easily managed with React Material UI.
+- CSS in JS has been used for styling purpose which is very well supported by Material UI.
 - The app can be enhanced even further and the candidates for the same are part of code as comments. Searching **todo** in the repo will list down places where enhancements can be done in future.
 - The web page is hosted @https://bot-intents.netlify.app/
 - Redux has not been used in the app. Given the amount of data does not cater the need to use Redux. Redux might have been a good choice during the overall application development where sharing of state across components is required.
+- The app is best optimized for Desktop View, but also works well with Mobile devices. The UI should not break on Handheld devices, though UI optimizations on handheld devices still needs to be done.
 - The test cases written are very basic and more will be added in future. 
 - Below is the lighthouse report.
 
