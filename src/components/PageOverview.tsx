@@ -36,7 +36,8 @@ const PageOverview: React.FC = (): React.ReactElement => {
 
   return (
     <section className={classes.pageOverViewCont}>
-      {/* future */}
+      {/* todo - As of now, I have simply used a bot image depecting somewhat the purpose of webpage.I could have 
+       used an image where intent and user relationship can be depcited in a better way. A web designer could be of help here :) */}
       <div className={classes.botImage}>
         <img src={botImage} alt='bot' className={classes.botImage}></img>
       </div>

@@ -13,7 +13,6 @@ interface IIntentGroupProps {
   onIntentSelect: (intentId: string) => boolean,
 };
 
-/* future */
 const useStyles = makeStyles((theme: Theme) => 
   createStyles({
     intentGroupCont: {
@@ -51,7 +50,6 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-/* future */
 const IntentGroup: React.FC<IIntentGroupProps> = (props: IIntentGroupProps): React.ReactElement => {
 
   const classes = useStyles();
@@ -67,7 +65,6 @@ const IntentGroup: React.FC<IIntentGroupProps> = (props: IIntentGroupProps): Rea
     })
   ), [intents, onIntentSelect, selectedCount]);
 
-  /* future */
   return (
     <section className={classes.intentGroupCont}>
       <Typography variant='h5' className={classes.groupDescription}>General Intents</Typography>

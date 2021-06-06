@@ -24,7 +24,8 @@ declare module '@material-ui/core/styles/createMuiTheme' {
   }
 }
 
-/* future */
+/* todo - I have used Material UI theme over here which is static and in future I can make it dynamic may be 
+fetching the CSS config from backend, implementing different themes like a Dark theme */
 const theme = createMuiTheme({
   palette: {
     primary: {

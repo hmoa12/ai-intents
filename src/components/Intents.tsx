@@ -20,7 +20,8 @@ const Intents: React.FC = (): React.ReactElement => {
   const [isAllSelected, setIsAllSelected] = useState<boolean>(false);
 
   const addStateAttributesToIntentsData: Function = (intentsData: IIntentsData[]): boolean => {
-    /* future */
+    /* Here, I have added isSelected key which is part of my intent state to my intents data. Depending 
+    on use case, we can add more state values to data or can have it as part of data from API/JSON */
     const intentDataWithIsSelectedKey = intentsData.map(intent => ({
         ...intent,
         isSelected: false
@@ -65,6 +66,13 @@ const Intents: React.FC = (): React.ReactElement => {
     return true;
   }
 
+  /* todo - I would say that component IntentGroup is not of much signficance with the amount of data I have right now
+    for this app. My Intents can be based on different groups like E-commerce, Airline etc or may be different language. In future,
+    if I have that data with I would be utlizing this component in a better way and down below I could have a list of groups.
+
+    As of now, I am just managing the state here and asuming that all my intents belong to one group */
+
+  /* todo - I will be implementing Intent search, Filter functionalities later on. */
   return (
     <section className={classes.intentsCont}>
       <IntentGroup 
