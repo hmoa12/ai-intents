@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { unstable_createMuiStrictModeTheme as createMuiTheme, ThemeProvider, } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './styles/theme'
 
 import App from './App';
 import './index.css';
-declare module '@material-ui/core/styles/createMuiTheme' {
+declare module '@material-ui/core/styles/' {
   interface IPaletteColor {
     light?: string;
     main: string;
@@ -23,36 +24,6 @@ declare module '@material-ui/core/styles/createMuiTheme' {
     Typography: ITypography
   }
 }
-
-/* todo - I have used Material UI theme over here which is static and in future I can make it dynamic may be 
-fetching the CSS config from backend, implementing different themes like a Dark theme */
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#034D9F',
-    },
-  },
-  typography: {
-    fontFamily: [
-      '-apple-system',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-    ].join(','),
-    subtitle1: {
-      color: '#495057'
-    },
-    h5: {
-      fontWeight: 500,
-      color: '#212529'
-    },
-    subtitle2: {
-      fontStyle: 'italic'
-    }
-  }
-});
 
 ReactDOM.render(
   <React.StrictMode>

@@ -8,7 +8,7 @@ interface IExpressionProps {
 
 const Expression: React.FC<IExpressionProps> = (props: IExpressionProps): React.ReactElement => {
 
-  const {expression} = props;
+  const { expression } = props;
 
   return <Typography variant='subtitle2' gutterBottom>User: {expression}</Typography>
 }
